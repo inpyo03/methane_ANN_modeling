@@ -418,7 +418,7 @@ print(Data.describe())
 print(Outlier_indices)
 </code></pre>
 
-![alt text](image.png)
+![이상치제거_CH4CO2](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/64374b83-de9d-483d-88b0-1e60ade5d22f)
 
 ---
 
@@ -444,7 +444,8 @@ print(Data.describe())
 print(Outlier_indices)
 </code></pre>
 
-![alt text](image-1.png)
+![이상치제거_체중](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/f550c329-3c4a-4480-9ef6-3352a4ed32f8)
+
 
 ---
 
@@ -469,7 +470,8 @@ print(Data.describe())
 print(Outlier_indices)
 </code></pre>
 
-![alt text](image-2.png)
+![이상치제거_DMI](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/dd08c3ff-5538-4b3e-9cdb-5446e5225d79)
+
 
 ---
 
@@ -494,7 +496,8 @@ print(Data.describe())
 print(Outlier_indices)
 </code></pre>
 
-![alt text](image-3.png)
+![이상치제거_ECM](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/a140b612-66f7-4939-b887-1beb63c8c8fa)
+
 
 ---
 
@@ -514,7 +517,8 @@ print(outlier_indices)
 
 </code></pre>
 
-![alt text](image-4.png)
+![이상치제거_CHr](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/a1c6ad87-95c4-4fe6-90da-8a4c8fd3e540)
+
 
 ## 4. 데이터 정규화(Data normalization)
 
@@ -640,13 +644,15 @@ plt.figure(figsize = (14, 10))
 sns.heatmap(nor_df.corr(), annot = True)
 </code></pre>
 
-![alt text](image-5.png)
+![correlation matrix](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/9bba3b68-aace-4314-9e7a-a7b037929268)
+
 
 ### 5-2. VIF score analysis
 
 VIF는 독립변수간 상관 관계를 측정하는 척도이다. VIF score analysis는 독립변수 간 VIF를 확인하여 다중공선성을 파악하는 분석방법이다. VIF가 10이 넘으면 다중공선성이 있다고 판단하며 5가 넘으면 주의할 필요가 있는것으로 본다.
 
-![alt text](image-6.png)
+![VIF 계산식](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/744ce0b5-738e-40d5-a359-44a34e94e6b5)
+
 
 아래 코드는 기존 일본 추정식에서 사용된 변수 간의 VIF를 비교한 코드이다.
 
@@ -858,7 +864,8 @@ MLR_1 = MLR(x,y)
 
 </code></pre>
 
-![alt text](image-7.png)
+![MLR](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/9dce7d3b-daa8-48de-8841-cdc6865b54ca)
+
 
 #### MLR 결과
 
@@ -967,7 +974,8 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
 
 </code></pre>
 
-![alt text](image-8.png)
+![ML 결과 정리](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/7caa174a-384d-4cd6-aa48-258718c3c36d)
+
 
 ---
 
@@ -1427,7 +1435,8 @@ ANN_1 = FunctionFindBestParams_1(x_train_1, y_train_1, x_test_1, y_test_1, k_fol
 ANN_1.to_excel('CH4_ANN_model1.xlsx', index=False)
 </code></pre>
 
-![alt text](image-9.png)
+![hyperparameter tuning](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/5ae13d10-45df-4684-ba31-4fe69415f4d4)
+
 
 ---
 
