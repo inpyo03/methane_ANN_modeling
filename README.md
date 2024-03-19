@@ -629,7 +629,7 @@ print(nor_df.describe())
 </table>
 </div>
 
-## 5.Feature selection
+## 5. Feature selection
 
 Feature selection은 Pearson's correlation matrix와 vif score 분석을 사용한다. 하지만 우리는 기존 일본 추정식 (2)의 변수인 CH4/CO2 ratio, 체중, ECM, CH4(L/d)에 대한 결과만 중점적으로 확인하였다.
 
