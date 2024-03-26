@@ -1500,5 +1500,5 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 
 ### 8-1 기술통계량 확인
 
-#### [기술통계량](##1. Analysis preperation)
+#### [기술통계량](#2-Analysis preperation)
 
