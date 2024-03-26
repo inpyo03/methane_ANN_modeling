@@ -1495,3 +1495,10 @@ Validation data에 대하여 생성된 모델 중 Accuracy가 93.28, R2가 0.92,
 | ANN  |  93.28   | 0.92 | 0.91  | 43.53 | 7.92  |
 
 MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델보다 2.65, ML 모델보다 1.88 향상된 Accuracy를 보였다. Adjusted R2에서도 ANN 모델이 MLR과 ML보다 각각 0.10, 0.07 향상되었다. 평가지표를 비교하였을때 ANN 모델이 MLR, ML보다 성능이 향상됨을 보였다.
+
+## 8 4가지 변수(CH4/CO2, 체중, ECM, DMI)
+
+### 8-1 기술통계량 확인
+
+#### [기술통계량](##1-Data-importing)
+
