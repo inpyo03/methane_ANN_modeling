@@ -587,7 +587,7 @@ sns.heatmap(nor_df.corr(), annot = True)
 
 ![correlation matrix](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/9bba3b68-aace-4314-9e7a-a7b037929268)
 
-
+[이전 문서로](#8-4-feature-selection)
 ## 5-2. VIF score analysis
 
 VIF는 독립변수간 상관 관계를 측정하는 척도이다. VIF score analysis는 독립변수 간 VIF를 확인하여 다중공선성을 파악하는 분석방법이다. VIF가 10이 넘으면 다중공선성이 있다고 판단하며 5가 넘으면 주의할 필요가 있는것으로 본다.
@@ -1359,13 +1359,13 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 문서 내 [3. 이상치 확인](#3-이상치-확인)과 동일하게 진행되었다. 변수별 이상치를 확인하였으나 따로 이상치 제거는 진행하지 않았다.
 
 ## 8-3 데이터 정규화
-문서 내 [4. Nomralization](#4-데이터-정규화)
+문서 내 [4. Nomralization](#4-데이터-정규화)와 동일하게 진행되었다.
 
 ## 8-4 Feature selection
 변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다.
 
-### [Pearson's correlation matrix](#5-1-pearsons-correlation-matrix)
-
+### Pearson's correlation matrix
+문서 내 [5-1. Pearsons correlation matrix](#5-1-pearsons-correlation-matrix)와 동일하게 진행되었다.
 
 
 
