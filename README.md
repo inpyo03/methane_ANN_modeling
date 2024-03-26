@@ -569,7 +569,7 @@ print(nor_df.describe())
   </tbody>
 </table>
 
-
+[이전 문서로](#8-3-데이터-정규화)
 # 5. Feature selection
 
 Feature selection은 Pearson's correlation matrix와 vif score 분석을 사용한다. 하지만 우리는 기존 일본 추정식 (2)의 변수인 CH4/CO2 ratio, 체중, ECM, CH4(L/d)에 대한 결과만 중점적으로 확인하였다.
@@ -1360,7 +1360,7 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 ### [이상치 확인](#3-이상치-확인)
 문서 내 3. 이상치 확인과 동일하게 진행되었다. 변수별 이상치를 확인하였으나 따로 이상치 제거는 진행하지 않았다.
 
-## 8-3 Normalization
+## 8-3 데이터 정규화
 문서 내 [4. Nomralization](#4-데이터-정규화)
 변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다. 4. 
 ### [Pearson's correlation matrix](#
