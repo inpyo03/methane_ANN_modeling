@@ -1364,7 +1364,7 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 ## 8-4 Feature selection
 변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다.
 
-### [Pearson's correlation matrix](#5-1-Pearson's-correlation-matrix)
+### [Pearson's correlation matrix](#5-1-pearson's-correlation-matrix)
 
 
 
