@@ -587,7 +587,7 @@ sns.heatmap(nor_df.corr(), annot = True)
 
 ![correlation matrix](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/9bba3b68-aace-4314-9e7a-a7b037929268)
 
-[이전 문서로](#pearsons-correlation-matrix)
+[이전 문서로](#8-4-1-pearsons-correlation-matrix)
 ## 5-2. VIF score analysis
 
 VIF는 독립변수간 상관 관계를 측정하는 척도이다. VIF score analysis는 독립변수 간 VIF를 확인하여 다중공선성을 파악하는 분석방법이다. VIF가 10이 넘으면 다중공선성이 있다고 판단하며 5가 넘으면 주의할 필요가 있는것으로 본다.
