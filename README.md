@@ -291,7 +291,7 @@ DataFrame_col.head()
 ---
 
 불러온 데이터에 대한 기술통계량을 확인하였다.
-
+### 기술통계량
 <pre><code>#기술통계량 확인(df)
 des_df = round(DataFrame_col.describe(),4)
 des_df
@@ -1500,5 +1500,5 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 
 ## 8-1 기술통계량 확인
 
-### [기술통계량](#2-data-importing)
+### [기술통계량](#기술통계량)
 
