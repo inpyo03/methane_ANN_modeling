@@ -343,7 +343,7 @@ des_df
   </tbody>
 </table>
 
-### [이전 문서로](#8-1-기술통계량-확인)
+[이전 문서로](#8-1-기술통계량-확인)
 
 # 3. 이상치 확인
 
@@ -473,7 +473,7 @@ print(outlier_indices)
 
 ![이상치제거_CHr](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/a1c6ad87-95c4-4fe6-90da-8a4c8fd3e540)
 
-### [이전 문서로](#8-2-이상치-확인)
+[이전 문서로](#8-2-이상치-확인)
 
 # 4. 데이터 정규화
 
@@ -1360,8 +1360,12 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 
 ## 8-3 데이터 정규화
 문서 내 [4. Nomralization](#4-데이터-정규화)
-변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다. 4. 
-### [Pearson's correlation matrix](#
+
+## 8-4 Feature selection
+변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다.
+
+### [Pearson's correlation matrix](#5-1-Pearson's-correlation-matrix)
+
 
 
 
