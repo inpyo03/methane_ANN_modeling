@@ -41,21 +41,6 @@ DataFrame = df.drop(columns = ['Period','샘플링일차(1-4)','시간(0-24)','�
 DataFrame.head()
 </pre></code>
 
- <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -206,8 +191,6 @@ DataFrame.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 52 columns</p>
-</div>
 
 ---
 
@@ -217,21 +200,6 @@ DataFrame.head()
 DataFrame_col.head()
 </pre></code>
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -286,7 +254,6 @@ DataFrame_col.head()
     </tr>
   </tbody>
 </table>
-</div>
 
 ---
 
@@ -296,21 +263,7 @@ DataFrame_col.head()
 des_df = round(DataFrame_col.describe(),4)
 des_df
 </code></pre>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -389,7 +342,6 @@ des_df
     </tr>
   </tbody>
 </table>
-</div>
 
 # 3. 이상치 확인
 
@@ -534,21 +486,7 @@ nor_df.drop('CH4(L/d)', axis=1, inplace=True)
 nor_df['CH4(L/d)'] = y_unnormalized
 print(nor_df.describe())
 </code></pre>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -627,7 +565,7 @@ print(nor_df.describe())
     </tr>
   </tbody>
 </table>
-</div>
+
 
 # 5. Feature selection
 
@@ -670,21 +608,6 @@ vif['VIF Score'] = [variance_inflation_factor(matrix_x,i) for i in range(matrix_
 vif
 </code></pre>
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -711,7 +634,7 @@ vif
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ---
 
@@ -738,21 +661,7 @@ x = df_na.drop(columns = ['CH4(L/d)'], axis = 1)
 y = df_na[['CH4(L/d)']]
 x.describe()
 </code></pre>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -813,7 +722,7 @@ x.describe()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ---
 
@@ -869,21 +778,6 @@ MLR_1 = MLR(x,y)
 
 ### MLR 결과
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: middle">
@@ -908,7 +802,7 @@ MLR_1 = MLR(x,y)
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ---
 
@@ -981,21 +875,6 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
 
 ### 7-4-1 ML 결과 (validation data)
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: middle;">
@@ -1115,27 +994,12 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
     </tr>
   </tbody>
 </table>
-</div>
 
 ---
 
 ### 7-4-2 ML 결과 (test data)
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: middle;">
@@ -1256,27 +1120,13 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ---
 
 ### 7-4-3 ML 모델 제시
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: middle">
@@ -1301,7 +1151,6 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
     </tr>
   </tbody>
 </table>
-</div>
 
 ML 결과 중 모델 평가지표를 비교하여 모델을 제시하였다. valdation data에 대한 Accuracy가 92.46으로 가장 높았으며, RMSE도 55.09로 두번째로 낮았다. test data에 대한 결과를 비교하였을때 validation data의 결과와 큰 차이를 보이지 않아 해당 모델을 제시하였다.
 
@@ -1501,4 +1350,8 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 ## 8-1 기술통계량 확인
 
 ### [기술통계량](#기술통계량)
+문서 내 2. Data importing에서의 기술통계량과 동일하다.
 
+## 8-2 이상치 제거
+[이상치 제거](#3-이상치제거)
+문서 내 이상치 제거와 동일하게 진행하였다. 변수별 이상치를 확인하였으나 따로 이상치 제거는 진행하지 않았다.
