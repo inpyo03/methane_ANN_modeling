@@ -31,7 +31,7 @@ sns.set(font="Malgun Gothic",
 rc={"axes.unicode_minus":False}, style='white')
 </pre></code>
 
-# 2 Data importing
+# 2. Data importing
 
 분석에 사용되는 데이터를 불러오고 데이터에서 불필요한 컬럼을 제거하였다. 데이터는 건국대에서 측정한 그린피드 데이터를 사용하였다.
 
@@ -1500,5 +1500,5 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 
 ## 8-1 기술통계량 확인
 
-### [기술통계량](#2-data-importing)
+### [기술통계량](#2.-data-importing)
 
