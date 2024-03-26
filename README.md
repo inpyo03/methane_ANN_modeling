@@ -1,6 +1,6 @@
 # methane_ANN_modeling
 
-## 1. Analysis preperation
+# 1. Analysis preperation
 
 분석 진행 이전에 분석에 필요한 파이썬 패키지를 불러오는 과정이다. 해당 분석에서 활용된 패키지는 아래와 같다.
 
@@ -31,7 +31,7 @@ sns.set(font="Malgun Gothic",
 rc={"axes.unicode_minus":False}, style='white')
 </pre></code>
 
-## 2. Data importing
+# 2. Data importing
 
 분석에 사용되는 데이터를 불러오고 데이터에서 불필요한 컬럼을 제거하였다. 데이터는 건국대에서 측정한 그린피드 데이터를 사용하였다.
 
@@ -391,7 +391,7 @@ des_df
 </table>
 </div>
 
-## 3. 이상치 확인
+# 3. 이상치 확인
 
 각 데이터에 대한 이상치를 확인하였다. 이상치 확인에는 IQR을 활용한 방법과 Z-score를 활용한 방법을 사용하였다. IQR에 대한 배수는 1.5로 적용하였으며, Z-score에 대한 threshold는 3으로 적용하였다. 실질적으로 이상치를 제거하진 않았으며 분석결과를 토대로 이상치 제거 진행여부를 판단할것이다.
 
@@ -520,7 +520,7 @@ print(outlier_indices)
 ![이상치제거_CHr](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/a1c6ad87-95c4-4fe6-90da-8a4c8fd3e540)
 
 
-## 4. 데이터 정규화(Data normalization)
+# 4. 데이터 정규화(Data normalization)
 
 데이터 간의 스케일이 다른경우 계산의 용이함을 위하여 데이터 정규화를 진행한다. 데이터 정규화 시에 데이터 처리속도가 계선된다. 데이터 정규화에는 Min-Max normalization 기법을 사용하였다.
 
@@ -629,13 +629,13 @@ print(nor_df.describe())
 </table>
 </div>
 
-## 5. Feature selection
+# 5. Feature selection
 
 Feature selection은 Pearson's correlation matrix와 vif score 분석을 사용한다. 하지만 우리는 기존 일본 추정식 (2)의 변수인 CH4/CO2 ratio, 체중, ECM, CH4(L/d)에 대한 결과만 중점적으로 확인하였다.
 
 기존 일본 추정식 (2): CH4(L/day)= −507(45.0) + 0.536(0.0635)LW + 8.76(0.630)ECM + 5,029(313.8)CH4/CO2
 
-### 5-1. Pearson's correlation matrix
+## 5-1. Pearson's correlation matrix
 
 Pearson's correlation matrix는 변수간의 상관관계를 확인하여 선택하는 통계적 방법이다. 각 변수간의 상관계수를 통해 상관관계를 확인하였다.
 
@@ -647,7 +647,7 @@ sns.heatmap(nor_df.corr(), annot = True)
 ![correlation matrix](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/9bba3b68-aace-4314-9e7a-a7b037929268)
 
 
-### 5-2. VIF score analysis
+## 5-2. VIF score analysis
 
 VIF는 독립변수간 상관 관계를 측정하는 척도이다. VIF score analysis는 독립변수 간 VIF를 확인하여 다중공선성을 파악하는 분석방법이다. VIF가 10이 넘으면 다중공선성이 있다고 판단하며 5가 넘으면 주의할 필요가 있는것으로 본다.
 
@@ -715,19 +715,19 @@ vif
 
 ---
 
-## 6. Model selection
+# 6. Model selection
 
 선택된 변수를 활용하여 변수모델을 선택하는 과정이다. 일본 추정식 (2)을 기반으로 모델식을 구축하고 있으므로 일본 추정식 (2)에 맞춰 모델을 선택하였다.
 
 선택된 변수모델: CH4(L/d) = CH4/CO2 + 체중 + ECM
 
-## 7. Model Fitting & Model evaluation
+# 7. Model Fitting & Model evaluation
 
 선택된 변수 모델에 데이터를 학습시키는 과정이다. 해당 데이터를 MLR, ML, ANN을 사용하여 모델을 구축하였다.
 
 ---
 
-### 7-1 결측치 제거
+## 7-1 결측치 제거
 
 변수모델에 맞춰 결측치 인덱스를 제거하였다. 아래 결과는 결측치 제거한 후 변수의 기술통계량을 나타내었다.
 
@@ -817,7 +817,7 @@ x.describe()
 
 ---
 
-### 7-2 Data split
+## 7-2 Data split
 
 ML, ANN 분석을 위해서, training data와 test data로 split하는 과정이 필수적이다. Data split은 8:2의 비율로 진행하였으며, randome_state는 42로 지정하였다.
 
@@ -831,7 +831,7 @@ y_train_1 = y_train_1.reset_index(drop=True)
 
 ---
 
-### 7-3 MLR 분석
+## 7-3 MLR 분석
 
 전체 데이터를 활용하여 MLR 분석을 진행하였다. MLR 분석에는 scikit-learn의 LinearRegression을 활용하여 진행하였다. 모델평가지표로는 Accuracy, RMSE, RRMSE, R2, adjusted R2를 사용하였다.
 
@@ -867,7 +867,7 @@ MLR_1 = MLR(x,y)
 ![MLR](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/9dce7d3b-daa8-48de-8841-cdc6865b54ca)
 
 
-#### MLR 결과
+### MLR 결과
 
 <div>
 <style scoped>
@@ -912,7 +912,7 @@ MLR_1 = MLR(x,y)
 
 ---
 
-### 7-4 ML 분석
+## 7-4 ML 분석
 
 ML 분석에는 8:2의 비율로 스플릿된 데이터를 사용하여 진행하였다. 10-fold crossvalidation을 진행하여 모델을 비교검증하였다. 모델평가는 Accuracy, RMSE, RRMSE, R2, adjusted R2로 평가하였다.
 
@@ -979,7 +979,7 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
 
 ---
 
-#### 7-4-1 ML 결과 (validation data)
+### 7-4-1 ML 결과 (validation data)
 
 <div>
 <style scoped>
@@ -1119,7 +1119,7 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
 
 ---
 
-#### 7-4-2 ML 결과 (test data)
+### 7-4-2 ML 결과 (test data)
 
 <div>
 <style scoped>
@@ -1260,7 +1260,7 @@ ML_1.to_excel('CH4_ML1.xlsx', index=False)
 
 ---
 
-#### 7-4-3 ML 모델 제시
+### 7-4-3 ML 모델 제시
 
 <div>
 <style scoped>
@@ -1307,9 +1307,9 @@ ML 결과 중 모델 평가지표를 비교하여 모델을 제시하였다. val
 
 ---
 
-### 7-5 ANN 분석
+## 7-5 ANN 분석
 
-#### 7-5-1 Kerastuner
+### 7-5-1 Kerastuner
 
 Kerastuner를 사용하여 ANN 모델의 최적의 Dense layer 수와 각 Dense layer별 nod 수를 확인하였다. Dense layer 수는 1-5로 설정하였다. 각 Dense layer별 노드의 범위는 32-512로 설정하였으며, 32씩 증가하도록 설정하였다.
 
@@ -1358,7 +1358,7 @@ kerastuner 결과 최적의 Dense Layer 수는 5개로 나타났으며, Layer별
 
 ---
 
-#### 7-5-2 hyperparameter tuning(batch_size, epoch)
+### 7-5-2 hyperparameter tuning(batch_size, epoch)
 
 Kerastuner 결과를 적용하여 batch_size와 epoch을 tuning하였다. batch_size와 epoch에 대한 list는 아래 표에 정리하였다. 해당 리스트에서 최적의 batch_size와 epoch을 확인하고자 하였다.
 
@@ -1440,7 +1440,7 @@ ANN_1.to_excel('CH4_ANN_model1.xlsx', index=False)
 
 ---
 
-#### 7-5-3 ANN 결과(validation data)
+### 7-5-3 ANN 결과(validation data)
 
 |         모델         | Hyperparameters <br> (batch size – epoch) | Accuracy |  R2  | Adjr2 | RMSE  | RRMSE |
 | :------------------: | :---------------------------------------: | :------: | :--: | :---: | :---: | :---: |
@@ -1459,7 +1459,7 @@ ANN_1.to_excel('CH4_ANN_model1.xlsx', index=False)
 
 ---
 
-#### 7-5-4 ANN 결과(test data)
+### 7-5-4 ANN 결과(test data)
 
 |         모델         | Hyperparameters <br> (batch size – epoch) | Accuracy |  R2  | Adjr2 | RMSE  | RRMSE |
 | :------------------: | :---------------------------------------: | :------: | :--: | :---: | :---: | :---: |
@@ -1478,7 +1478,7 @@ ANN_1.to_excel('CH4_ANN_model1.xlsx', index=False)
 
 ---
 
-#### 7-5-5 ANN 모델 제시
+### 7-5-5 ANN 모델 제시
 
 |  모델   | Hyperparameters | Accuracy |  R2  | Adfr2 | RMSE  |
 | :-----: | :-------------: | :------: | :--: | :---: | :---: |
@@ -1486,7 +1486,7 @@ ANN_1.to_excel('CH4_ANN_model1.xlsx', index=False)
 
 Validation data에 대하여 생성된 모델 중 Accuracy가 93.28, R2가 0.92, Adjusted R2가 0.91로 가장 높았으며, RMSE가 43.53으로 가장 낮았다. test data에 대한 결과와 비교해보았을 때도 큰 차이가 없어 해당 모델을 제시하였다.
 
-### 7-6 모델간의 비교
+## 7-6 모델간의 비교
 
 | 모델 | Accuracy |  R2  | Adjr2 | RMSE  | RRMSE |
 | :--: | :------: | :--: | :---: | :---: | :---: |
@@ -1496,9 +1496,9 @@ Validation data에 대하여 생성된 모델 중 Accuracy가 93.28, R2가 0.92,
 
 MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델보다 2.65, ML 모델보다 1.88 향상된 Accuracy를 보였다. Adjusted R2에서도 ANN 모델이 MLR과 ML보다 각각 0.10, 0.07 향상되었다. 평가지표를 비교하였을때 ANN 모델이 MLR, ML보다 성능이 향상됨을 보였다.
 
-## 8 4가지 변수(CH4/CO2, 체중, ECM, DMI)
+# 8. 4가지 변수(CH4/CO2, 체중, ECM, DMI)
 
-### 8-1 기술통계량 확인
+## 8-1 기술통계량 확인
 
-#### [기술통계량](##2-data-importing)
+### [기술통계량](#2.-data-importing)
 
