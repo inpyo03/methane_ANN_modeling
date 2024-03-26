@@ -1361,7 +1361,7 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 문서 내 3. 이상치 확인과 동일하게 진행되었다. 변수별 이상치를 확인하였으나 따로 이상치 제거는 진행하지 않았다.
 
 ## 8-3 Normalization
-문서 내 [4. Nomralization](#4-데이터-정규화(Data-normalization))
+문서 내 [4. Nomralization](#4-데이터-정규화)
 변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다. 4. 
 ### [Pearson's correlation matrix](#
 
