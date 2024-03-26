@@ -473,6 +473,7 @@ print(outlier_indices)
 
 ![이상치제거_CHr](https://github.com/inpyo03/methane_ANN_modeling/assets/160727249/a1c6ad87-95c4-4fe6-90da-8a4c8fd3e540)
 
+### [이전 문서로](#8-2-이상치-확인)
 
 # 4. 데이터 정규화(Data normalization)
 
@@ -1357,5 +1358,12 @@ MLR, ML, ANN 모델을 평가지표로 비교하였다. ANN 모델이 MLR 모델
 
 ## 8-2 이상치 제거
 ### [이상치 확인](#3-이상치-확인)
-문서 내 이상치 제거와 동일하게 진행하였다. 변수별 이상치를 확인하였으나 따로 이상치 제거는 진행하지 않았다.
+문서 내 3. 이상치 확인과 동일하게 진행되었다. 변수별 이상치를 확인하였으나 따로 이상치 제거는 진행하지 않았다.
+
+## 8-3 Normalization
+문서 내 [4. Nomralization](#4-데이터-정규화(Data-normalization))
+변수는 4가지를 선택하여 진행하였기 때문에 변수간 Correlation과 Vif score만 확인하였다. 4. 
+### [Pearson's correlation matrix](#
+
+
 
